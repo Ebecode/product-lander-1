@@ -12,30 +12,43 @@ header {
 	align-items: center;
 	padding: 0 60px;
 	max-height: 10vh;
-	border: 1px solid red;
+
+	font-size: 1.4rem;
+	color: #3a817c;
+	background-color: #e4e4e7;
 }
 
 
+
 button {
-	color: #fff;
-	font-size: 1rem;
-	background-color: #666;
+	background-color: #3a817c;
+	
 	border-radius: 3px;
 	border: none;
 	padding: 10px 20px;
+	color:#e4e4e7;
+	font-size: 1rem;
+}
+/* button a {
+	color:#e4e4e7;
+	text-decoration: none;
+	font-size: 1rem;
+} */
+
+button:hover {
+	background-color: #468881;
+	cursor: pointer;
 }
 
 h1 {
 	font-size: 2rem;
 }
 
-/*div {
-	border: 1px solid red;
-}*/
+/*Banner*/
 
 .banner {
-	color: #fff;
-	background-image: url(https://images.unsplash.com/photo-1493810353548-4cdea49dea74?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80);
+	color: #e4e4e7;
+	background-image: url(https://images.unsplash.com/photo-1546019901-e9bccf605171?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -55,16 +68,38 @@ h1 {
 .input-bar {
 	display: flex;
 	flex-direction: row;
+	min-width: 40%;
+}
+.input-bar * {
+	font-size: 1.5rem;
+	margin: 3px;
 	
 }
 
-.summary {
-	display: flex;
-	flex-direction: row;
+.input-bar input {
+	border-radius: 3px;
+	border: none;
+	padding: 5px 20px;
+	min-width: 35vw;
+
+	color: #333;
 }
-.summary div {
-	max-width: 33vw;
-	min-height: 60vh;
+.input-bar input:focus {
+	outline-color: #3a817c;
+	outline-width: 5px;
+}
+.btn-lg {
+	padding: 12px 30px;
+}
+
+/*thirds*/
+.thirds {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 2em;
+}
+.thirds div {
+	min-height: 40vh;
 }
 
 .showcase {
