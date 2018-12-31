@@ -1,3 +1,9 @@
+/*my colors:
+	#3a817c; dark teal
+	#468881; light teal
+	#e4e4e7; super light blue-gray
+	#333; input dark gray
+*/
 body,html{
 	margin: 0;
 	padding: 0;
@@ -97,9 +103,16 @@ h1 {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-gap: 2em;
+
+	background-color: #e4e4e7;
 }
 .thirds div {
-	min-height: 40vh;
+	min-height: 50vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	padding: 2em;
 }
 
 .showcase {
