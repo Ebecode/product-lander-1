@@ -1,59 +1,44 @@
-/*my colors:
-	#3a817c; dark teal
-	#468881; light teal
-	#e4e4e7; super light blue-gray
-	#333; input dark gray
-*/
-body,html{
+/* General setup */
+body,html {
 	margin: 0;
 	padding: 0;
 	font-family: sans-serif;
-	font-size: 16px;
+	font-size: 20px;
+
+	color: #222;
 }
 
-header {
-	display: flex;
+/* Layout */
+.main-grid {
+    margin: 0;
+    padding: 0;
+
+    display: grid;
+    grid-template-columns: 100px repeat(6, 1fr) 100px;/* 8 columns */
+    grid-template-rows: 55px 90vh repeat(4,75vh) 20vh 65vh 50vh 30vh;/* 10 rows */
+}
+
+.top-bar {
+    grid-row: 1 / 2;
+    grid-column: 1 / 9;
+
+    display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-between;
-	align-items: center;
-	padding: 0 60px;
+    align-items: center;
+    padding: 0 60px;
 	max-height: 10vh;
-
-	font-size: 1.4rem;
+    
+    
 	color: #3a817c;
 	background-color: #e4e4e7;
 }
 
-
-
-button {
-	background-color: #3a817c;
-	
-	border-radius: 3px;
-	border: none;
-	padding: 10px 20px;
-	color:#e4e4e7;
-	font-size: 1rem;
-}
-/* button a {
-	color:#e4e4e7;
-	text-decoration: none;
-	font-size: 1rem;
-} */
-
-button:hover {
-	background-color: #468881;
-	cursor: pointer;
-}
-
-h1 {
-	font-size: 2rem;
-}
-
-/*Banner*/
-
 .banner {
-	color: #e4e4e7;
+    grid-row: 2 / 3;
+    grid-column: 1 / 9;
+
+    color: #e4e4e7;
 	background-image: url(https://images.unsplash.com/photo-1546019901-e9bccf605171?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80);
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -63,12 +48,149 @@ h1 {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	min-width: 100%;
-
 }
 
-.banner-lg {
-	min-height: 90vh;
+.feature {
+    grid-row: 3 / 4;
+    
+    display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	padding: 2em;
+}
+
+.feature-a {
+    grid-column: 2 / 4;
+}
+.feature-b {
+    grid-column: 4 / 6;
+}
+.feature-c {
+    grid-column: 6 / 8;
+}
+
+.showcase-a,.pic-a {
+	grid-row: 4 / 5;
+}
+.showcase-a {
+	grid-column: 1 / 5;
+}
+.pic-a {
+	grid-column: 5 / 9;
+	
+	background-image: url(https://images.unsplash.com/photo-1531935015902-64b87c1f4da5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=376&q=80);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.showcase-b,.pic-b {
+	grid-row: 5 / 6;
+}
+.pic-b {
+	grid-column: 1 / 5;
+	
+	background-image: url(https://images.unsplash.com/photo-1517134191118-9d595e4c8c2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.showcase-b {
+	grid-column: 5 / 9;
+}
+
+.showcase-c,.pic-c {
+	grid-row: 6 / 7;
+}
+.showcase-c {
+	grid-column: 1 / 5;
+}
+.pic-c {
+	grid-column: 5 / 9;
+	
+	background-image: url(https://images.unsplash.com/photo-1541692641319-981cc79ee10a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.test-header {
+	grid-row: 7 / 8;
+	grid-column: 1 / 9;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.client {
+	grid-row: 8 / 9;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	padding: 2em;
+}
+.client-a {
+	grid-column: 2 / 4;
+}
+.client-b {
+	grid-column: 4 / 6;
+}
+.client-c {
+	grid-column: 6 / 8;
+}
+
+.banner-sm {
+	grid-row: 9 / 10;
+	grid-column: 1 / 9;
+}
+
+.foot-bar {
+	grid-row: 10 / 11;
+	grid-column: 1 / 9;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+/* Elements */
+h1 {
+	font-size: 1.5rem;
+}
+
+button {
+	background-color: #3a817c;
+	
+	border-radius: 3px;
+	border: none;
+	padding: 10px 20px;
+	color:#e4e4e7;
+	
+}
+
+button:hover {
+	background-color: #468881;
+	cursor: pointer;
+}
+
+.btn-lg {
+	padding: 10px 30px;
+	font-size: 1rem;
+}
+.btn-sm {
+	padding: 10px 12px;
+	font-size: 0.8rem;
+}
+
+.banner h1 {
+	font-size: 2rem;
+	text-align: center;
+	max-width: 66%;
 }
 
 .input-bar {
@@ -77,7 +199,7 @@ h1 {
 	min-width: 40%;
 }
 .input-bar * {
-	font-size: 1.5rem;
+	font-size: 1rem;
 	margin: 3px;
 	
 }
@@ -94,47 +216,22 @@ h1 {
 	outline-color: #3a817c;
 	outline-width: 5px;
 }
-.btn-lg {
-	padding: 12px 30px;
+
+.feature i {
+	color: #468881;
 }
 
-/*thirds*/
-.thirds {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-gap: 2em;
+.client img {
+	max-width: 200px;
+	max-height: 200px;
 
-	background-color: #e4e4e7;
-}
-.thirds div {
-	min-height: 50vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	text-align: center;
-	padding: 2em;
+	border-radius: 100%;
+	box-shadow: 5px 5px #888;
 }
 
-.showcase {
-	display: flex;
-	flex-flow: row wrap;
-}
-.showcase-block {
-	width: 50%;
-	min-height: 75vh;
-}
-.showcase-img {
-	width: 50%;
-	background-image: url(https://images.unsplash.com/photo-1519687079572-8a59631f3685?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
+.top-bar,.foot-bar {
+	padding: 0 80px;
+	font-size: 1rem;
 }
 
-.testimonials {
-	display: flex;
-}
-.clients {
-	max-width: 33%;
-	min-height: 40vh;
-}
+/* Media queries */
