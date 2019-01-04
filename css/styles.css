@@ -16,7 +16,7 @@ body,html {
 
     display: grid;
     grid-template-columns: 100px repeat(6, 1fr) 100px;/* 8 columns */
-    grid-template-rows: 55px 90vh 70vh repeat(3,80vh) 20vh 65vh 50vh 30vh;/* 10 rows */
+    grid-template-rows: 55px 90vh 70vh repeat(3,80vh) 25vh 70vh 60vh 30vh;/* 10 rows */
 }
 
 .top-bar {
@@ -125,6 +125,7 @@ body,html {
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
+
 }
 
 .client {
@@ -134,7 +135,8 @@ body,html {
 	flex-direction: column;
 	justify-content: center;
 	text-align: center;
-	padding: 2em;
+	padding: 2em 2em 5em 2em;
+	
 }
 .client-a {
 	grid-column: 2 / 4;
@@ -158,6 +160,8 @@ body,html {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	align-items: center;
+
 }
 
 /* Elements */
@@ -230,16 +234,44 @@ button:hover {
 }
 
 .client img {
-	max-width: 200px;
-	max-height: 200px;
+	display: block;
+	width: 200px;
+	height: 200px;
 
 	border-radius: 100%;
-	box-shadow: 3px 5px #ddd;
+	box-shadow: 0 5px #bbb;
+
+	margin: auto;
+	object-fit: cover;
 }
 
 .top-bar,.foot-bar {
 	padding: 0 80px;
 	font-size: 1rem;
+}
+
+.foot-bar a, .foot-bar i {
+	color: #468881;
+	text-decoration: none;
+}
+.foot-bar p {
+	color: #333;
+	font-size: 0.7rem;
+}
+.foot-bar ul {
+	display: flex;
+	flex-direction: row;
+	list-style: none;
+	
+}
+.foot-bar li {
+	margin-right: 10px;
+}
+.foot-bar li::before {
+	content: "\2022";
+	color: #468881;
+	display: inline-block;
+	margin-right: 5px;
 }
 
 /* Media queries */
