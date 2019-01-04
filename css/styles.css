@@ -6,6 +6,7 @@ body,html {
 	font-size: 20px;
 
 	color: #222;
+	background-color: #eee;
 }
 
 /* Layout */
@@ -15,7 +16,7 @@ body,html {
 
     display: grid;
     grid-template-columns: 100px repeat(6, 1fr) 100px;/* 8 columns */
-    grid-template-rows: 55px 90vh repeat(4,75vh) 20vh 65vh 50vh 30vh;/* 10 rows */
+    grid-template-rows: 55px 90vh 70vh repeat(3,80vh) 20vh 65vh 50vh 30vh;/* 10 rows */
 }
 
 .top-bar {
@@ -58,6 +59,7 @@ body,html {
 	justify-content: center;
 	text-align: center;
 	padding: 2em;
+
 }
 
 .feature-a {
@@ -221,12 +223,18 @@ button:hover {
 	color: #468881;
 }
 
+.showcase {
+	padding: 20%;
+
+	background-color: #fff;
+}
+
 .client img {
 	max-width: 200px;
 	max-height: 200px;
 
 	border-radius: 100%;
-	box-shadow: 5px 5px #888;
+	box-shadow: 3px 5px #ddd;
 }
 
 .top-bar,.foot-bar {
