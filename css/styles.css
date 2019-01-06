@@ -226,6 +226,9 @@ button:hover {
 .feature i {
 	color: #468881;
 }
+.feature i:hover {
+	transform: scale(1.5,1.5);
+}
 
 .showcase {
 	padding: 20%;
@@ -258,20 +261,21 @@ button:hover {
 	color: #333;
 	font-size: 0.7rem;
 }
-.foot-bar ul {
-	display: flex;
-	flex-direction: row;
-	list-style: none;
-	
-}
-.foot-bar li {
-	margin-right: 10px;
-}
-.foot-bar li::before {
+.foot-bar a:not(:first-child)::before {
 	content: "\2022";
-	color: #468881;
 	display: inline-block;
-	margin-right: 5px;
+	margin: 0 10px;
+}
+.foot-bar i:not(:first-child){
+	margin-left: 10px;
+}
+
+.foot-bar a:hover {
+	text-decoration: underline;
+}
+.foot-bar i:hover {
+	color: #3a817c;
+	cursor: pointer;
 }
 
 /* Media queries */
